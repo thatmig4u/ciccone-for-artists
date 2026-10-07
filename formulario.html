@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Inscrição | Ciccone Records</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #0b0b0d;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 0 16px 60px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      height: 90px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+
+      margin-bottom: 45px;
+    }
+
+    .logo {
+      height: 30px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .back {
+      font-size: 13px;
+      color: #999;
+    }
+
+    /* TITLE */
+
+    .title {
+      margin-bottom: 40px;
+    }
+
+    .title small {
+      display: block;
+
+      margin-bottom: 14px;
+
+      color: #888;
+
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .title h1 {
+      font-size: clamp(40px, 9vw, 68px);
+      line-height: 0.95;
+      letter-spacing: -3px;
+    }
+
+    .title p {
+      max-width: 520px;
+
+      margin-top: 20px;
+
+      color: #999;
+
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* SECTIONS */
+
+    .section {
+      padding: 35px 0;
+
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .section-title {
+      margin-bottom: 25px;
+
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    /* FORM */
+
+    .field {
+      margin-bottom: 22px;
+    }
+
+    label {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    .required {
+      color: #fff;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+
+      padding: 14px 14px;
+
+      border: 1px solid #29292d;
+      border-radius: 5px;
+
+      background: #121216;
+      color: #fff;
+
+      font-family: inherit;
+      font-size: 14px;
+
+      outline: none;
+
+      transition: border-color 0.2s;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #777;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    select {
+      appearance: none;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #555;
+    }
+
+    .hint {
+      margin-top: 7px;
+
+      color: #666;
+
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    /* BUTTON */
+
+    .submit-area {
+      padding-top: 35px;
+    }
+
+    button {
+      width: 100%;
+
+      padding: 17px;
+
+      border: none;
+      border-radius: 5px;
+
+      background: #fff;
+      color: #000;
+
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition: opacity 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: wait;
+    }
+
+    /* STATUS */
+
+    #status {
+      display: none;
+
+      margin-top: 18px;
+
+      padding: 14px;
+
+      border: 1px solid #29292d;
+      border-radius: 5px;
+
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    #status.success {
+      display: block;
+      color: #b8ffca;
+    }
+
+    #status.error {
+      display: block;
+      color: #ffaaaa;
+    }
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 55px;
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(255,255,255,0.08);
+
+      color: #555;
+
+      font-size: 11px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+
+      body {
+        padding: 0 16px 45px;
+      }
+
+      header {
+        height: 75px;
+        margin-bottom: 40px;
+      }
+
+      .logo {
+        height: 27px;
+      }
+
+      .title h1 {
+        letter-spacing: -2px;
+      }
+
+      .section {
+        padding: 30px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+
+    <header>
+
+      <a href="index.html">
+        <img
+          src="logo.png"
+          alt="Ciccone Records"
+          class="logo"
+        >
+      </a>
+
+      <a
+        href="index.html"
+        class="back"
+      >
+        Voltar
+      </a>
+
+    </header>
+
+
+    <!-- TITLE -->
+
+    <div class="title">
+
+      <small>Ciccone Records</small>
+
+      <h1>
+        Inscrição
+      </h1>
+
+      <p>
+        Preencha o formulário com suas informações
+        e envie seu projeto para a Ciccone Records.
+      </p>
+
+    </div>
+
+
+    <form id="formulario">
+
+
+      <!-- INFORMAÇÕES -->
+
+      <section class="section">
+
+        <h2 class="section-title">
+          Informações
+        </h2>
+
+
+        <div class="field">
+
+          <label for="nome_artistico">
+            Nome artístico *
+          </label>
+
+          <input
+            type="text"
+            id="nome_artistico"
+            required
+            placeholder="Seu nome artístico"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="email">
+            E-mail *
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="seuemail@email.com"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="whatsapp">
+            WhatsApp
+          </label>
+
+          <input
+            type="tel"
+            id="whatsapp"
+            placeholder="(00) 00000-0000"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="cidade_pais">
+            Cidade / País
+          </label>
+
+          <input
+            type="text"
+            id="cidade_pais"
+            placeholder="Ex.: São Paulo, Brasil"
+          >
+
+        </div>
+
+      </section>
+
+
+      <!-- PERFIL MUSICAL -->
+
+      <section class="section">
+
+        <h2 class="section-title">
+          Perfil musical
+        </h2>
+
+
+        <div class="field">
+
+          <label for="tipo_projeto">
+            Tipo de projeto *
+          </label>
+
+          <select
+            id="tipo_projeto"
+            required
+          >
+
+            <option value="">
+              Selecione
+            </option>
+
+            <option value="Artista solo">
+              Artista solo
+            </option>
+
+            <option value="Dupla">
+              Dupla
+            </option>
+
+            <option value="Banda">
+              Banda
+            </option>
+
+            <option value="Outro">
+              Outro
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="genero">
+            Gênero musical *
+          </label>
+
+          <input
+            type="text"
+            id="genero"
+            required
+            placeholder="Ex.: Pop"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="subgenero">
+            Subgênero
+          </label>
+
+          <input
+            type="text"
+            id="subgenero"
+            placeholder="Opcional"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="biografia">
+            Biografia *
+          </label>
+
+          <textarea
+            id="biografia"
+            required
+            placeholder="Conte um pouco sobre seu projeto."
+          ></textarea>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="experiencia">
+            Experiência
+          </label>
+
+          <textarea
+            id="experiencia"
+            placeholder="Experiência musical, apresentações, lançamentos etc."
+          ></textarea>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="principais_lancamentos">
+            Principais lançamentos
+          </label>
+
+          <textarea
+            id="principais_lancamentos"
+            placeholder="Informe seus principais lançamentos."
+          ></textarea>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="objetivos_gravadora">
+            O que você procura na gravadora? *
+          </label>
+
+          <textarea
+            id="objetivos_gravadora"
+            required
+            placeholder="Conte o que você procura na Ciccone Records."
+          ></textarea>
+
+        </div>
+
+      </section>
+
+
+      <!-- REDES -->
+
+      <section class="section">
+
+        <h2 class="section-title">
+          Redes e plataformas
+        </h2>
+
+
+        <div class="field">
+
+          <label for="instagram">
+            Instagram *
+          </label>
+
+          <input
+            type="text"
+            id="instagram"
+            required
+            placeholder="@seuusuario ou link"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="tiktok">
+            TikTok *
+          </label>
+
+          <input
+            type="text"
+            id="tiktok"
+            required
+            placeholder="@seuusuario ou link"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="spotify">
+            Spotify *
+          </label>
+
+          <input
+            type="url"
+            id="spotify"
+            required
+            placeholder="Link do seu perfil"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="youtube">
+            YouTube *
+          </label>
+
+          <input
+            type="url"
+            id="youtube"
+            required
+            placeholder="Link do seu canal"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="apple_music">
+            Apple Music
+          </label>
+
+          <input
+            type="url"
+            id="apple_music"
+            placeholder="Link do perfil"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="soundcloud">
+            SoundCloud
+          </label>
+
+          <input
+            type="url"
+            id="soundcloud"
+            placeholder="Link do perfil"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="site">
+            Site
+          </label>
+
+          <input
+            type="url"
+            id="site"
+            placeholder="https://"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="outra_plataforma">
+            Outra plataforma
+          </label>
+
+          <input
+            type="text"
+            id="outra_plataforma"
+            placeholder="Nome e link"
+          >
+
+        </div>
+
+      </section>
+
+
+      <!-- LINKS -->
+
+      <section class="section">
+
+        <h2 class="section-title">
+          Links adicionais
+        </h2>
+
+
+        <div class="field">
+
+          <label for="link_demo">
+            Demo
+          </label>
+
+          <input
+            type="url"
+            id="link_demo"
+            placeholder="Link para sua demo"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="link_apresentacao">
+            Apresentação
+          </label>
+
+          <input
+            type="url"
+            id="link_apresentacao"
+            placeholder="Link"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="link_portfolio">
+            Portfólio
+          </label>
+
+          <input
+            type="url"
+            id="link_portfolio"
+            placeholder="Link"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="observacoes">
+            Observações
+          </label>
+
+          <textarea
+            id="observacoes"
+            placeholder="Alguma informação adicional?"
+          ></textarea>
+
+        </div>
+
+      </section>
+
+
+      <!-- ENVIO -->
+
+      <div class="submit-area">
+
+        <button
+          type="submit"
+          id="submitButton"
+        >
+          Enviar inscrição
+        </button>
+
+        <div id="status"></div>
+
+      </div>
+
+    </form>
+
+
+    <footer>
+      Ciccone Records
+    </footer>
+
+  </div>
+
+
+  <!-- SUPABASE -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+  <script>
+
+    const SUPABASE_URL = "COLE_AQUI_A_URL_DO_SEU_PROJETO";
+
+    const SUPABASE_KEY = "COLE_AQUI_SUA_CHAVE_PUBLICAVEL";
+
+
+    const { createClient } = supabase;
+
+    const supabaseClient = createClient(
+      SUPABASE_URL,
+      SUPABASE_KEY
+    );
+
+
+    const formulario = document.getElementById("formulario");
+
+    const button = document.getElementById("submitButton");
+
+    const status = document.getElementById("status");
+
+
+    formulario.addEventListener("submit", async function(event) {
+
+      event.preventDefault();
+
+
+      button.disabled = true;
+
+      button.textContent = "Enviando...";
+
+      status.className = "";
+
+      status.style.display = "none";
+
+
+      const candidatura = {
+
+        nome_artistico:
+          document.getElementById("nome_artistico").value.trim(),
+
+        email:
+          document.getElementById("email").value.trim(),
+
+        whatsapp:
+          document.getElementById("whatsapp").value.trim() || null,
+
+        cidade_pais:
+          document.getElementById("cidade_pais").value.trim() || null,
+
+
+        tipo_projeto:
+          document.getElementById("tipo_projeto").value,
+
+        genero:
+          document.getElementById("genero").value.trim(),
+
+        subgenero:
+          document.getElementById("subgenero").value.trim() || null,
+
+        biografia:
+          document.getElementById("biografia").value.trim(),
+
+        experiencia:
+          document.getElementById("experiencia").value.trim() || null,
+
+        principais_lancamentos:
+          document.getElementById("principais_lancamentos").value.trim() || null,
+
+        objetivos_gravadora:
+          document.getElementById("objetivos_gravadora").value.trim(),
+
+
+        instagram:
+          document.getElementById("instagram").value.trim(),
+
+        tiktok:
+          document.getElementById("tiktok").value.trim(),
+
+        spotify:
+          document.getElementById("spotify").value.trim(),
+
+        youtube:
+          document.getElementById("youtube").value.trim(),
+
+
+        apple_music:
+          document.getElementById("apple_music").value.trim() || null,
+
+        soundcloud:
+          document.getElementById("soundcloud").value.trim() || null,
+
+        site:
+          document.getElementById("site").value.trim() || null,
+
+        outra_plataforma:
+          document.getElementById("outra_plataforma").value.trim() || null,
+
+
+        link_demo:
+          document.getElementById("link_demo").value.trim() || null,
+
+        link_apresentacao:
+          document.getElementById("link_apresentacao").value.trim() || null,
+
+        link_portfolio:
+          document.getElementById("link_portfolio").value.trim() || null,
+
+
+        observacoes:
+          document.getElementById("observacoes").value.trim() || null
+
+      };
+
+
+      const { error } = await supabaseClient
+        .from("candidaturas")
+        .insert([candidatura]);
+
+
+      if (error) {
+
+        console.error(error);
+
+        status.textContent =
+          "Não foi possível enviar a inscrição. Tente novamente.";
+
+        status.className = "error";
+
+        button.disabled = false;
+
+        button.textContent = "Enviar inscrição";
+
+        return;
+      }
+
+
+      status.textContent =
+        "Inscrição enviada com sucesso.";
+
+      status.className = "success";
+
+
+      formulario.reset();
+
+      button.disabled = false;
+
+      button.textContent = "Enviar inscrição";
+
+    });
+
+  </script>
+
+</body>
+</html>
