@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Inscrições | Ciccone Records</title>
+
   <meta
     name="description"
     content="Inscrições de artistas para a Ciccone Records."
   >
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -22,7 +25,7 @@
     }
 
     body {
-      background: #0b0b0d;
+      background: #000;
       color: #fff;
       font-family: Arial, Helvetica, sans-serif;
       overflow-x: hidden;
@@ -36,20 +39,20 @@
     /* HEADER */
 
     header {
-      height: 70px;
-      padding: 0 20px;
+      height: 82px;
+      padding: 0 24px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
     }
 
     .logo {
-      height: 32px;
-      width: auto;
-      object-fit: contain;
+      width: 150px;
+      height: auto;
+      display: block;
     }
 
     .header-link {
@@ -57,15 +60,19 @@
       color: #aaa;
     }
 
+    .header-link:hover {
+      color: #fff;
+    }
+
     /* HERO */
 
     .hero {
-      min-height: calc(100vh - 70px);
+      min-height: calc(100vh - 82px);
 
       display: flex;
       align-items: center;
 
-      padding: 60px 20px;
+      padding: 70px 24px;
     }
 
     .hero-content {
@@ -75,15 +82,17 @@
     }
 
     .eyebrow {
+      margin-bottom: 22px;
+
+      color: #999;
+
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #999;
-      margin-bottom: 20px;
     }
 
     .hero h1 {
-      max-width: 800px;
+      max-width: 850px;
 
       font-size: clamp(48px, 10vw, 96px);
       line-height: 0.92;
@@ -92,20 +101,23 @@
     }
 
     .hero-text {
-      max-width: 500px;
+      max-width: 520px;
 
       margin-top: 28px;
 
       color: #aaa;
+
       font-size: 16px;
       line-height: 1.6;
     }
 
     .main-button {
       display: inline-flex;
+      align-items: center;
+      justify-content: center;
 
       margin-top: 32px;
-      padding: 16px 25px;
+      padding: 16px 28px;
 
       background: #fff;
       color: #000;
@@ -113,7 +125,7 @@
       font-size: 14px;
       font-weight: 600;
 
-      transition: 0.2s ease;
+      transition: opacity 0.2s;
     }
 
     .main-button:hover {
@@ -123,9 +135,9 @@
     /* INFO */
 
     .info {
-      padding: 70px 20px;
+      padding: 80px 24px;
 
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255,255,255,0.12);
     }
 
     .info-inner {
@@ -134,142 +146,87 @@
     }
 
     .section-label {
-      font-size: 12px;
+      margin-bottom: 24px;
+
+      color: #888;
+
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: #888;
-      margin-bottom: 25px;
     }
 
     .info h2 {
-      font-size: clamp(28px, 6vw, 48px);
+      margin-bottom: 20px;
+
+      font-size: clamp(30px, 6vw, 50px);
       line-height: 1;
       letter-spacing: -2px;
-      margin-bottom: 20px;
     }
 
     .info p {
       max-width: 600px;
 
       color: #aaa;
+
       font-size: 15px;
       line-height: 1.7;
-    }
-
-    /* ARTISTS */
-
-    .artists-section {
-      padding: 70px 0;
-
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .artists-header {
-      max-width: 900px;
-      margin: auto;
-      padding: 0 20px 25px;
-    }
-
-    .artists-header h2 {
-      font-size: 32px;
-      letter-spacing: -1px;
-    }
-
-    .artists {
-      display: grid;
-
-      grid-template-columns: repeat(5, 1fr);
-
-      gap: 10px;
-
-      max-width: 1400px;
-      margin: auto;
-      padding: 0 20px;
-    }
-
-    .artist {
-      position: relative;
-
-      aspect-ratio: 1 / 1;
-
-      overflow: hidden;
-
-      background: #151518;
-    }
-
-    .artist img {
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-
-      display: block;
-
-      transition: transform 0.4s ease;
-    }
-
-    .artist:hover img {
-      transform: scale(1.04);
-    }
-
-    .artist-name {
-      position: absolute;
-
-      left: 12px;
-      bottom: 12px;
-
-      font-size: 13px;
-      font-weight: 600;
-
-      text-shadow: 0 2px 10px rgba(0,0,0,0.8);
     }
 
     /* FINAL CTA */
 
     .final-cta {
-      padding: 100px 20px;
+      padding: 100px 24px;
 
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255,255,255,0.12);
 
       text-align: center;
     }
 
     .final-cta h2 {
-      font-size: clamp(32px, 7vw, 58px);
-      letter-spacing: -2px;
       margin-bottom: 25px;
+
+      font-size: clamp(34px, 7vw, 60px);
+      line-height: 1;
+      letter-spacing: -2px;
     }
 
     /* FOOTER */
 
     footer {
-      padding: 25px 20px;
+      padding: 25px 24px;
 
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255,255,255,0.12);
 
       display: flex;
       justify-content: space-between;
+      gap: 15px;
 
       color: #666;
+
       font-size: 12px;
     }
 
     /* MOBILE */
 
-    @media (max-width: 800px) {
+    @media (max-width: 600px) {
 
       header {
+        height: 72px;
         padding: 0 16px;
       }
 
       .logo {
-        height: 28px;
+        width: 125px;
+      }
+
+      .header-link {
+        font-size: 12px;
       }
 
       .hero {
-        min-height: calc(100vh - 70px);
+        min-height: calc(100vh - 72px);
 
-        padding: 50px 16px;
+        padding: 55px 16px;
       }
 
       .hero h1 {
@@ -281,40 +238,7 @@
       }
 
       .info {
-        padding: 60px 16px;
-      }
-
-      .artists-section {
-        padding: 60px 0;
-      }
-
-      .artists-header {
-        padding: 0 16px 20px;
-      }
-
-      .artists {
-        display: flex;
-
-        overflow-x: auto;
-
-        gap: 10px;
-
-        padding: 0 16px 8px;
-
-        scrollbar-width: none;
-
-        scroll-snap-type: x mandatory;
-      }
-
-      .artists::-webkit-scrollbar {
-        display: none;
-      }
-
-      .artist {
-        flex: 0 0 72vw;
-        max-width: 300px;
-
-        scroll-snap-align: start;
+        padding: 65px 16px;
       }
 
       .final-cta {
@@ -322,26 +246,36 @@
       }
 
       footer {
+        padding: 22px 16px;
+
         flex-direction: column;
         gap: 8px;
       }
+
     }
+
   </style>
+
 </head>
 
+
 <body>
+
 
   <!-- HEADER -->
 
   <header>
 
     <a href="index.html">
+
       <img
         src="logo.png"
         alt="Ciccone Records"
         class="logo"
       >
+
     </a>
+
 
     <a
       href="formulario.html"
@@ -353,9 +287,10 @@
   </header>
 
 
-  <!-- HERO -->
+  <!-- PRINCIPAL -->
 
   <main>
+
 
     <section class="hero">
 
@@ -365,14 +300,17 @@
           Ciccone Records
         </div>
 
+
         <h1>
           Inscrições para artistas
         </h1>
 
+
         <p class="hero-text">
-          Quer fazer parte da Ciccone Records?
-          Envie suas informações e seus links através do formulário.
+          Envie suas informações e seu projeto
+          para a Ciccone Records através do formulário.
         </p>
+
 
         <a
           href="formulario.html"
@@ -386,7 +324,7 @@
     </section>
 
 
-    <!-- COMO FUNCIONA -->
+    <!-- INFORMAÇÕES -->
 
     <section class="info">
 
@@ -396,113 +334,16 @@
           Inscrição
         </div>
 
+
         <h2>
           Envie seu projeto.
         </h2>
+
 
         <p>
           Preencha o formulário com suas informações,
           redes sociais, plataformas e materiais.
         </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- ARTISTAS -->
-
-    <section class="artists-section" id="artists">
-
-      <div class="artists-header">
-
-        <div class="section-label">
-          Ciccone Records
-        </div>
-
-        <h2>
-          Artistas
-        </h2>
-
-      </div>
-
-
-      <div class="artists">
-
-        <a class="artist" href="#">
-          <img src="artista-01.jpg" alt="Artista 01">
-          <span class="artist-name">Artist 01</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-02.jpg" alt="Artista 02">
-          <span class="artist-name">Artist 02</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-03.jpg" alt="Artista 03">
-          <span class="artist-name">Artist 03</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-04.jpg" alt="Artista 04">
-          <span class="artist-name">Artist 04</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-05.jpg" alt="Artista 05">
-          <span class="artist-name">Artist 05</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-06.jpg" alt="Artista 06">
-          <span class="artist-name">Artist 06</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-07.jpg" alt="Artista 07">
-          <span class="artist-name">Artist 07</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-08.jpg" alt="Artista 08">
-          <span class="artist-name">Artist 08</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-09.jpg" alt="Artista 09">
-          <span class="artist-name">Artist 09</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-10.jpg" alt="Artista 10">
-          <span class="artist-name">Artist 10</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-11.jpg" alt="Artista 11">
-          <span class="artist-name">Artist 11</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-12.jpg" alt="Artista 12">
-          <span class="artist-name">Artist 12</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-13.jpg" alt="Artista 13">
-          <span class="artist-name">Artist 13</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-14.jpg" alt="Artista 14">
-          <span class="artist-name">Artist 14</span>
-        </a>
-
-        <a class="artist" href="#">
-          <img src="artista-15.jpg" alt="Artista 15">
-          <span class="artist-name">Artist 15</span>
-        </a>
 
       </div>
 
@@ -516,6 +357,7 @@
       <h2>
         Quer se inscrever?
       </h2>
+
 
       <a
         href="formulario.html"
@@ -543,5 +385,7 @@
 
   </footer>
 
+
 </body>
-  </html>
+
+</html>
